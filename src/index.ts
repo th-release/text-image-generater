@@ -1,5 +1,5 @@
-import fs from 'fs'
-import textToImage from 'text-to-image'
+import fs from 'fs';
+import textToImage from 'text-to-image';
 
 textToImage.generate('text here!', {
   maxWidth: 720,
@@ -10,5 +10,6 @@ textToImage.generate('text here!', {
   bgColor: "white",
   textColor: "black"
 }).then(function (dataUri) {
-  
+  const buffer = Buffer.from(dataUri, "base64");
+  fs.writeFileSync("image.jpg", buffer);
 })
