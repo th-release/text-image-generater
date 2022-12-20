@@ -9,5 +9,8 @@
     "@types/node": "^18.11.17",
     "fs": "^0.0.1-security",
     "text-to-image": "^5.2.0"
+  },
+  "scripts": {
+    "build": "tsc"
   }
 }
